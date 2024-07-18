@@ -1,0 +1,11 @@
+type SalleSport{
+    id:ID,
+    name:String
+    owner:String
+    city:String
+    capacite:Int
+}
+type Query{
+    getall:[SalleSport]
+    getsallesportbyowner(owner:String):[SalleSport]
+}

@@ -1,6 +1,8 @@
 package elmoukhantar.yass.demoprojectiongraphql;
 
+import elmoukhantar.yass.demoprojectiongraphql.entities.Adherent;
 import elmoukhantar.yass.demoprojectiongraphql.entities.SalleSport;
+import elmoukhantar.yass.demoprojectiongraphql.repository.adhererentrepo;
 import elmoukhantar.yass.demoprojectiongraphql.repository.sallerepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,22 +17,20 @@ public class DemoProjectionGraphqlApplication {
     }
 
     @Bean
-    CommandLineRunner start(sallerepository sallerepositor){
+    CommandLineRunner start(sallerepository sallerepositor, adhererentrepo adherentrepository){
         return args->{
-        /*    sallerepositor.save(new SalleSport("123H","punchbybadrhari","anis","casablanca",400,null));
-            sallerepositor.save(new SalleSport("14OP","passagefitness","mouad","Tanger",700,null));
-            sallerepositor.save(new SalleSport("HUIP","plazza","laklalech","FES",200,null));
-            adherentrepository.save(new Adherent(13,"elmoukhantar","masculin",27,sallerepositor.findById("123H").get()));*/
-            sallerepositor.save(new SalleSport("123H","punchbybadrhari","anis","casablanca",400));
-            sallerepositor.save(new SalleSport("14OP","passagefitness","mouad","Tanger",700));
-            sallerepositor.save(new SalleSport("HUIP","plazza","laklalech","FES",200));
+
+           sallerepositor.save(new SalleSport("punchbybadrhari","CCC","casablanca",400));
+            sallerepositor.save(new SalleSport("passagefitness","BBB","Tanger",700));
+            sallerepositor.save(new SalleSport("plazza","AAA","FES",200));
 
 
+            adherentrepository.save(new Adherent("pald","elmoukhantar","yassine","casablanca","068347474"));
+            adherentrepository.save(new Adherent("palx","bennali","mouaad","tanger","9484848484"));
+            adherentrepository.save(new Adherent("pbol","abidar","yassine","marrakesh","093374747"));
+            adherentrepository.save(new Adherent("spal","azami","omar","fes","833838833"));
+            adherentrepository.save(new Adherent("apoi","laklalech","taha","fes","0833353534"));
 
-          /*  Adherent ad1=new Adherent(13,"elmoukhantar","masculin",27,null);
-            Adherent ad2=new Adherent(98,"smail","masculin",29,null);
-            Adherent ad3=new Adherent(99,"souad","femme",18,null);
-            sallerepositor.save(new SalleSport("123H","punchbybadrhari","anis","casablanca",400,ad2));*/
 
 
 

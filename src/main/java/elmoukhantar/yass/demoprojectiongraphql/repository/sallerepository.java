@@ -6,6 +6,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 
 @RepositoryRestResource
-public interface sallerepository extends JpaRepository<SalleSport, String> {
+public interface sallerepository extends JpaRepository<SalleSport, Integer> {
    SalleSport findByOwner(String owner);
 }
